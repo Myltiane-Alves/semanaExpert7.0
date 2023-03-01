@@ -8,7 +8,7 @@ import Service from './services.js'
 // no worker é self
 
 const {tf, faceLandmarksDetection } = self
-tf.setBackeng('webgl')
+tf.setBackend('webgl')
 
 const service = new Service({
     faceLandmarksDetection,

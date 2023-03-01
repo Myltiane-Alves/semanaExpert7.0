@@ -1,4 +1,8 @@
 export default class Camera {
+    constructor() {
+        this.video = document.createElement('video')
+    }
+
     static async init() {
         if(!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
             throw new Error(`
@@ -19,6 +23,7 @@ export default class Camera {
         const stream = await navigator.mediaDevices.getUserMedia(videoConfig)
         const camera = new Camera()
         camera.video.srcObject = stream
+        
         // debug reasons!
         camera.video.height = 240
         camera.video.width = 320

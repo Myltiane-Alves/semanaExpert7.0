@@ -1,5 +1,3 @@
-
-
 export default class Controller {
     #view
     #camera
@@ -49,7 +47,6 @@ export default class Controller {
         const img = this.#view.getVideoFrame(video)
         this.#worker.send(img)
         this.log(`detecting eye blink...`)
-
         setTimeout(() => this.loop, 100)
     }
     log(text) {

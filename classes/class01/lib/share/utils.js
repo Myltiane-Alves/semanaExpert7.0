@@ -22,6 +22,7 @@ function prepareRunChecker({ timerDelay }) {
         }
     }
 }
+
 export {
     supportsWorkerType,
     prepareRunChecker
