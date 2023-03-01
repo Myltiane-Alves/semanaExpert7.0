@@ -1,7 +1,8 @@
-import Controller from "./controller"
-import Service from "./services"
-import View from "./view"
-import Camera from "../../../lib/share/camera"
+import Controller from "./controller.js"
+import Service from "./services.js"
+import View from "./view.js"
+import Camera from "../../../lib/share/camera.js"
+import { supportsWorkerType } from "../../../lib/share/utils.js"
 
 async function getWorker() {
     if(supportsWorkerType()) {
@@ -45,8 +46,8 @@ const factory = {
     async initialize() {
         return Controller.initialize({
             view: new View(),
-            worker,
-            camera
+            camera,
+            worker
         })
     }
 }
