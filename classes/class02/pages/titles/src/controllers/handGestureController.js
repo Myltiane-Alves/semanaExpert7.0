@@ -15,9 +15,11 @@ export default class HandGestureController {
     this.#view = view
     this.#camera = camera
   }
+  
   async init() {
     return this.#loop()
   }
+
   #scrollPage(direction) {
     const pixelsPerScroll = 100
     if (this.#lastDirection.direction === direction) {
